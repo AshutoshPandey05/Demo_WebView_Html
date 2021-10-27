@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<form asp-controller="Demo" asp-action="Register" method="post">
+
+    <!-- Input and Submit elements -->
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To My Website</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="text-capitalize">
+    <h2 class="display-4">Register</h2>
+    <p>Fill Here To Register.</p>
+</div>
+</form>
+@model RegisterViewModel
+
+<form asp-controller="Home" asp-action="RegisterInput" method="post">
+    Email:  <input asp-for="Email" /> <br />
+    Password: <input asp-for="Password" /><br />
+    Date: <input asp-for="Date" /><br />
+    <select asp-for="Country" asp-items="Model.Countries"></select>
+    <button type="submit">Register for Placing order with Us</button>
+
+   
+</form>
+
+
